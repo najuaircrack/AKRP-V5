@@ -24,12 +24,16 @@ This release was made to ensure script integrity and transparency, especially in
 
 - **Game Mode Engine**: [Open.MP](https://open.mp) (recommended for stability and performance)
 - **Script Language**: PAWN (v3.10.10)
-- **Database**: MySQL (R41-4 plugin)
+- **Database**: MySQL (R39-6 plugin)
 - **Libraries**:
   - `open.mp` standard library
   - YSI (for core utilities)
   - Streamer
   - MySQL plugin by BlueG
+  - PawnPlus
+  - nex-ac
+  - discord-connector
+  - weapon-config
 
 ---
 
