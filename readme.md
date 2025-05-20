@@ -1,7 +1,7 @@
 # All Kerala Roleplay - V5-OMP
 ![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
 
-Welcome to the **official public release** of the Open.mp SAMP roleplay script used in the All Kerala Roleplay server. This script was developed and maintained by **NAJU (najuaircrack)** with the intention of providing a semi-optimized, clean, and functional roleplay base for Open.MP-based SA-MP servers.
+Welcome to the **official public release** of the open.mp samp roleplay gamemode used in the All Kerala Roleplay server. This script was developed and maintained by **NAJU (najuaircrack)** with the intention of providing a semi-optimized, clean, and functional roleplay base for Open.MP-based SA-MP servers.
 
 This release was made to ensure script integrity and transparency, especially in response to threats of unauthorized leaks. Please use this repository as the **only official source** of the AKRP V5-OMP script.
 
