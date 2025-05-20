@@ -11,11 +11,12 @@ This release was made to ensure script integrity and transparency, especially in
 
 **All Kerala Roleplay (AKRP)** is a regional roleplay community founded in Kerala, India. Focused on realism and creative roleplay scenarios, AKRP provided a stable and immersive multiplayer experience using the SA-MP engine.
 
-- **Founder**: SHAZ  
-- **Owner**: CARLO  
-- **Lead Developer**: NAJU (najuaircrack)  
+- **Founder**: SHAZ
+- **Lead Developer**: NAJU (najuaircrack)
+- **Lead Developer**: ROCKY  
+- **Owner**: GULAN & MANU  
 - **Script Version**: V5-OMP  
-- **Script Date**: 12/09/2024  
+- **Script Date**: 20/05/2025  
 
 ---
 
