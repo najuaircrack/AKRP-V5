@@ -69,6 +69,7 @@ Ensure your MySQL server is running and the credentials are correct.
 
 ### 3. Compile the Gamemode
 
+Extract The `include.rar` in /pawno.
 Use the Pawn compiler (3.10.10 recommended). Compile the main `AKRPV5.pwn` file to generate the `.amx`.
 
 Place all required plugins (`.so` / `.dll`), includes, and compiled files into your server directory.
