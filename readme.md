@@ -31,9 +31,9 @@ This release was made to ensure script integrity and transparency, especially in
   - Streamer
   - MySQL plugin by BlueG
   - PawnPlus
-  - nex-ac
-  - discord-connector
-  - weapon-config
+  - Nex-AC
+  - Discord-Connector
+  - Weapon-Config
 
 ---
 
