@@ -165,6 +165,6 @@ cmd:geforce(playerid, const params[])
 {
     notification_show(playerid, str_format("%s",params), 2000);
 	notification_show(playerid, str_format("%s",params), 2000, NOTIF_ERROR);
-	 notification_show(playerid, str_format("%s",params), 2000, NOTIF_SUCCESS);
+	notification_show(playerid, str_format("%s",params), 2000, NOTIF_SUCCESS);
     return 1;
 }
