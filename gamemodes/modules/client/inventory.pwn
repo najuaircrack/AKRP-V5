@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                         
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
@@ -26,17 +26,13 @@
 */
 
 #define MAX_INVENTORY               20
-
-//NEW VARIABLES
 new BukaInven[MAX_PLAYERS];
-//PLAYERTEXT
 new PlayerText:INVNAME[MAX_PLAYERS][6];
 new PlayerText:INVINFO[MAX_PLAYERS][11];
 new PlayerText:NAMETD[MAX_PLAYERS][MAX_INVENTORY];
 new PlayerText:INDEXTD[MAX_PLAYERS][MAX_INVENTORY];
 new PlayerText:MODELTD[MAX_PLAYERS][MAX_INVENTORY];
 new PlayerText:AMOUNTTD[MAX_PLAYERS][MAX_INVENTORY];
-
 new PlayerText:DropModel[MAX_PLAYERS][20];
 new PlayerText:DropTD[MAX_PLAYERS][22];
 new PlayerText:DropName[MAX_PLAYERS][20];
