@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                        
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
@@ -25,8 +25,6 @@
  ****************************************************************
 */
 
-
-//Safezone
 enum szInfo
 {
 	Float:szPosX,
@@ -37,6 +35,7 @@ enum szInfo
  	Text3D: szTextID,
 };
 new SafeZoneInfo[MAX_SZ][szInfo];
+
 stock SaveSafeZones()
 {
  	new
@@ -84,23 +83,6 @@ stock LoadSafeZones()
 	return fclose(iFileHandle);
 }
 
-
-// forward SZRespawn(playerid); 
-// public SZRespawn(playerid)
-// {
-//     new vehicleid = GetPlayerVehicleID(playerid);
-//     if(GetPlayerState(playerid) == PLAYER_STATE_DRIVER && IsPlayerAtGreenZone(playerid))
-//     {
-//          DespawnVehicle(vehicleid);
-//          SendClientMessage(playerid, COLOR_SYNTAX, "Vehicle Has Been Respawned As It Was In Safe Zone for 1 Min");
-//     }
-//     else
-//     {
-//        SetTimerEx("SZRespawn", 60000, false, "i", vehicleid);
-//     }
-//     return 0;
-// }
-
 IsPlayerAtGreenZone(playerid)
 {
     
@@ -113,12 +95,11 @@ IsPlayerAtGreenZone(playerid)
         }
         else
         {
-        	// PlayerTextDrawHide(playerid, SZTD[playerid][0]);
+        	
         }
     }
     return 0;
 }
-
 
 CMD:gotosz(playerid, params[])
 {
@@ -158,7 +139,6 @@ CMD:szedit(playerid, params[])
 
 		DestroyPickup(SafeZoneInfo[szid][szPickupID]);
 		DestroyDynamic3DTextLabel(SafeZoneInfo[szid][szTextID]);
-		//format(string, sizeof(string), "{FFFFFF}Safe Zone(ID: %d)\n{24D12F}%d Meters\n{DB8B35}Non-Kill",szid,SafeZoneInfo[szid][szSize]);
 		format(string, sizeof(string), "{FFFFFF}Safe Zone\nYou are not allowed to\n{FF0000}Damage{FFFFFF} Around here.");
 		SafeZoneInfo[szid][szTextID] = CreateDynamic3DTextLabel( string, -1, SafeZoneInfo[szid][szPosX], SafeZoneInfo[szid][szPosY], SafeZoneInfo[szid][szPosZ]+0.5,10.0, .testlos = 1, .streamdistance = 10.0);
 		SafeZoneInfo[szid][szPickupID] = CreatePickup(19134, 23, SafeZoneInfo[szid][szPosX], SafeZoneInfo[szid][szPosY], SafeZoneInfo[szid][szPosZ]);
@@ -170,7 +150,6 @@ CMD:szedit(playerid, params[])
 		SaveSafeZones();
 
 		DestroyDynamic3DTextLabel(SafeZoneInfo[szid][szTextID]);
-		//format(string, sizeof(string), "{0064FF}Safe Zone(ID: %d)\n{24D12F}%d Meters\n{DB8B35}Non-Kill",szid,SafeZoneInfo[szid][szSize]);
 		format(string, sizeof(string), "{FFFFFF}Safe Zone\nYou are not allowed to\n{FF0000}Damage{FFFFFF} Around here.");
   		SafeZoneInfo[szid][szTextID] = CreateDynamic3DTextLabel( string, -1, SafeZoneInfo[szid][szPosX], SafeZoneInfo[szid][szPosY], SafeZoneInfo[szid][szPosZ]+0.5,10.0, .testlos = 1, .streamdistance = 10.0);
  	}
@@ -198,16 +177,17 @@ CMD:szdelete(playerid, params[])
 	SendClientMessage(playerid, -1, string);
 	return 1;
 }
+
 CMD:szcreate(playerid, params[])
 {
-    if (PlayerInfo[playerid][pAdmin] < 4) // Check admin level
+    if (PlayerInfo[playerid][pAdmin] < 4) 
     {
         SendClientMessage(playerid, -1, "You do not have permission to use this command.");
         return 1;
     }
 
     new szSize1;
-    if (sscanf(params, "d", szSize1)) // Parse size parameter
+    if (sscanf(params, "d", szSize1)) 
     {
         SendClientMessage(playerid, -1, "USAGE: /szcreate [Size]");
         return 1;
@@ -223,7 +203,7 @@ CMD:szcreate(playerid, params[])
         }
     }
 
-    if (index == -1) // No available slot for a new Safe Zone
+    if (index == -1) 
     {
         SendClientMessage(playerid, -1, "No available slots for a new Safe Zone.");
         return 1;
@@ -238,8 +218,7 @@ CMD:szcreate(playerid, params[])
 			SafeZoneInfo[index][szPickupID] = CreateDynamicPickup(19134, 23, SafeZoneInfo[index][szPosX], SafeZoneInfo[index][szPosY], SafeZoneInfo[index][szPosZ]);
 			SafeZoneInfo[index][szTextID] = CreateDynamic3DTextLabel(string, -1, SafeZoneInfo[index][szPosX], SafeZoneInfo[index][szPosY], SafeZoneInfo[index][szPosZ]+0.5,30.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 0, -1, -1,  -1, 30.0);
 	}
-    // Create Pickup and Text Label
-    // Save Safe Zone Data
+    
     SaveSafeZones();
     format(string, sizeof(string), "Safe Zone created successfully at your location with size %d.", szSize1);
     SendClientMessage(playerid, -1, string);

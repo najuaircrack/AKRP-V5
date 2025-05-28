@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                         
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
@@ -25,7 +25,6 @@
  ****************************************************************
 */
 
-
 //-----------------------------[ DISCORD CONNECTOR]----------------------------
 
 #define cmds             "1203597105030107156"
@@ -38,7 +37,6 @@
 #define Cmdchannel       "1203597105030107156"
 
 //-----------------------------[ STOCK]----------------------------
-
 
 stock SendDiscordMessage(channel, const message[]) { 
 	new DCC_Channel:ChannelId;
@@ -231,6 +229,7 @@ stock SendDiscordMessage(channel, const message[]) {
 	}
 	return 1;
 }
+
 new DCC_Channel:whitelist_log;
 new DCC_Channel:announce_log;
 new DCC_Channel:admin_log;

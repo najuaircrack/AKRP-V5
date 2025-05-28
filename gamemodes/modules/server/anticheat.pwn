@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                        
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
@@ -25,9 +25,6 @@
  ****************************************************************
 */
 
-
-
-
 //-----------------------------[ ANTICHEATS]----------------------------
 
 #define AC_TABLE_SETTINGS "anticheat_settings"
@@ -43,16 +40,14 @@
 #define AC_GLOBAL_TRIGGER_TYPE_PLAYER 0
 #define AC_GLOBAL_TRIGGER_TYPE_IP 1
 
-#define AC_CODE_TRIGGER_TYPE_DISABLED 0                  // AC_CODE_TRIGGER_TYPE_DISABLED - Punishment type: Disabled
-#define AC_CODE_TRIGGER_TYPE_WARNING 1                   // AC_CODE_TRIGGER_TYPE_WARNING - Punishment type: Warning
-#define AC_CODE_TRIGGER_TYPE_KICK 2                      // AC_CODE_TRIGGER_TYPE_KICK - Punishment type: Kick
+#define AC_CODE_TRIGGER_TYPE_DISABLED 0                  
+#define AC_CODE_TRIGGER_TYPE_WARNING 1                   
+#define AC_CODE_TRIGGER_TYPE_KICK 2                      
 
-#define AC_TRIGGER_ANTIFLOOD_TIME 20                     // Time for anti-flood triggers (in seconds)
-#define AC_MAX_CODES_ON_PAGE 15                          // Maximum number of items on the anti-cheat settings page
-#define AC_DIALOG_NEXT_PAGE_TEXT ">>> Next page"         // Text of the button that will display the next page of the list
-#define AC_DIALOG_PREVIOUS_PAGE_TEXT "<<< Previous page" // Text of the button that will display the previous page of the list
-
-//-----------------------------[ NEW VARIABLES]----------------------------
+#define AC_TRIGGER_ANTIFLOOD_TIME 20                     
+#define AC_MAX_CODES_ON_PAGE 15                          
+#define AC_DIALOG_NEXT_PAGE_TEXT ">>> Next page"        
+#define AC_DIALOG_PREVIOUS_PAGE_TEXT "<<< Previous page" 
 
 new AC_CODE[AC_MAX_CODES][AC_MAX_CODE_LENGTH] =
 {
@@ -186,7 +181,7 @@ new
     pAntiCheatSettingsEditCodeId[MAX_PLAYERS];  
 
 //=====[ANTI BOT]=====//
-stock CountIP(const ip1[]) // Counts how many connections from one IP.
+stock CountIP(const ip1[]) 
 {
 	new b = 0;
 	foreach(new i : Player)
@@ -196,7 +191,7 @@ stock CountIP(const ip1[]) // Counts how many connections from one IP.
 	return b;
 }
 
-stock BanAllBots(playerid) // Bans the player.
+stock BanAllBots(playerid) 
 {
 	new PlayerName[25];
 	GetPlayerName(playerid, PlayerName, sizeof(PlayerName));
