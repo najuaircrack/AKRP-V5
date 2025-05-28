@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                        
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
