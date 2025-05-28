@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                        
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
@@ -26,7 +26,7 @@
 */
 
 
-//-----------------------------[ SERVER INFORMATION ]----------------------------
+//-----------------------------------------------------[ SCRIPTS INFO ] ----------------------------------------------------------
 #define SERVER_BOT       "AK:RP Bot"
 #define VERSION          "V5[<3]"
 #define REVISION         "AK:RP: "VERSION""
@@ -35,69 +35,48 @@
 #define SERVER_DIALOG    "{EC7063}"SERVER_NAME" "WHITE""VERSION""
 #define SERVER_URL       "discord.gg/Ytz73CtpRq"
 #define SERVER_DISCORD   "discord.gg/Ytz73CtpRq"
-
-#define SERVER_COLOR  0x04bd13FF
-#define SVRCLR       "{04bd13}"
-#define TEAL		"{00AAAA}"
-#define SERVER_COLOR2 0xEC7063ff
-#define SVRCLR2      "{EC7063}"
-#define COLOR_TWEET	     0x00FF80FF
-
 #define SERVER_MUSIC_URL ""SERVER_URL"/music"
 #define SERVER_FETCH_URL ""SERVER_URL"/music"
-
-//---------------------------[ MYSQL ACCOUNT ]--------------------------
-
+//---------------------------------------------------[ MYSQL ACCOUNT ] ----------------------------------------------------------
 #define MYSQL_HOSTNAME  ""
 #define MYSQL_DATABASE  ""
 #define MYSQL_USERNAME  ""
 #define MYSQL_PASSWORD  ""
 
-//-----------------------------[ DEFINES EXTRA ]----------------------------
+//---------------------------------------------------[ DEFINES EXTRA ] ----------------------------------------------------------
 #define MAX_BOT_CONNECTIONS 4
 #define MODEL_SELECTION_LANDOBJECTS 1
 #define MODEL_SELECTION_CLOTHING    2
 #define MODEL_SELECTION_CLOTHES     3
-
-#define COLOR_GRAD1 0xB4B5B7FF
-#define TEAM_HIT_COLOR 0xFFFFFF00
-#define TEAM_BLUE_COLOR 0x2641FE00
-#define AUTO_MESSAGE_TIME 5 // Minutes
-
+#define AUTO_MESSAGE_TIME 5
 #define RED_TEAM    0
 #define BLUE_TEAM   1
-
 #define MAX_RADIOS 100
-
 #define percent(%0,%1)  floatround((float((%0)) / 100) * (%1))
-//ANDROID
 #define IsPlayerAndroid(%0) !GetPVarInt(%0, "NotAndroid")
-new g_player_listitem[MAX_PLAYERS][96];
 #define GetPlayerListitemValue(%0,%1) 		g_player_listitem[%0][%1]
 #define SetPlayerListitemValue(%0,%1,%2) 	g_player_listitem[%0][%1] = %2
-// Anti CBUG
 #define PRESSED(%0) (((newkeys & (%0)) == (%0)) && ((oldkeys & (%0)) != (%0)))
-//SIM
 #define SIM_NONE 0
 #define SIM_TNT 1
 #define SIM_GLOBE 2
 #define SIM_SMART 3
-
 #define OILEXPO_LIMIT (5)
 #define WHEAT_LIMIT   (5)
+#define MAX_TDS 77
+#define MAX_LISTED_ITEMS 17
 
-//MAXES
+//---------------------------------------------------[ MAXES ] ----------------------------------------------------------
 #define MAX_SZ 						20
 #define MAX_LISTED_NUMBERS          50
 #define MAX_LISTED_OBJECTS          100
 #define MAX_LISTED_STATIONS         50
 #define MAX_SPLIT_LENGTH            70
-// ---------------------------------------
 #define MAX_REPORTS         		50
 #define MAX_ATMS                    51
 #define MAX_HOUSES                  500
 #define MAX_CCTVS 					100
-#define MAX_CCTVMENUS 				10  // This number should be MAX_CCTVS divided by 10
+#define MAX_CCTVMENUS 				10  
 #define MAX_GARAGES                 300
 #define MAX_BUSINESSES      		250
 #define MAX_ENTRANCES       		500
@@ -123,35 +102,34 @@ new g_player_listitem[MAX_PLAYERS][96];
 #define MAX_BANK_ROBBERS            7
 #define MAX_PGARAGE                 100
 #define MAX_GRAFFITI_POINTS         200
-#define MAX_VENDOR 100
-#define MAX_GGARAGE 100
-#define MAX_IP_SIZE 32
+#define MAX_VENDOR                  100
+#define MAX_GGARAGE                 100
+#define MAX_IP_SIZE                 32
+#define MAX_DROPPED_ITEMS           500
+#define MAX_STATIC_OBJECTS          275
 
-#define MAX_DROPPED_ITEMS 500
 
-
-//THREADS
-
+//---------------------------------------------------[ THREADS ] ----------------------------------------------------------
 #define THREAD_LOOKUP_BANS          1
 #define THREAD_LOOKUP_ACCOUNT    	2
 #define THREAD_ACCOUNT_REGISTER     3
 #define THREAD_PROCESS_LOGIN        4
 #define THREAD_COUNT_FLAGS          5
 #define THREAD_TRACE_IP             6
-#define THREAD_LIST_CHANGES         8
-#define THREAD_LIST_HELPERS         9
-#define THREAD_LOAD_HOUSES          10
-#define THREAD_LIST_TENANTS         11
-#define THREAD_LOAD_FURNITURE       12
-#define THREAD_LOAD_GARAGES         13
-#define THREAD_LOAD_BUSINESSES      14
-#define THREAD_LOAD_ENTRANCES       15
-#define THREAD_LOAD_CLOTHING        16
-#define THREAD_LOAD_FACTIONS        17
-#define THREAD_LOAD_FACTIONRANKS    18
-#define THREAD_LOAD_FACTIONSKINS    19
-#define THREAD_LOAD_FACTIONPAY      20
-#define THREAD_VALET_CARS           72
+#define THREAD_LIST_CHANGES         7
+#define THREAD_LIST_HELPERS         8
+#define THREAD_LOAD_HOUSES          9
+#define THREAD_LIST_TENANTS         10
+#define THREAD_LOAD_FURNITURE       11
+#define THREAD_LOAD_GARAGES         12
+#define THREAD_LOAD_BUSINESSES      13
+#define THREAD_LOAD_ENTRANCES       14
+#define THREAD_LOAD_CLOTHING        15
+#define THREAD_LOAD_FACTIONS        16
+#define THREAD_LOAD_FACTIONRANKS    17
+#define THREAD_LOAD_FACTIONSKINS    18
+#define THREAD_LOAD_FACTIONPAY      19
+#define THREAD_VALET_CARS           20
 #define THREAD_LOAD_DIVISIONS       21
 #define THREAD_LOAD_LANDS           22
 #define THREAD_LOAD_LANDOBJECTS     23
@@ -161,7 +139,7 @@ new g_player_listitem[MAX_PLAYERS][96];
 #define THREAD_LOAD_POINTS          27
 #define THREAD_LOAD_TURFS           28
 #define THREAD_HOUSE_INFORMATION    29
-#define THREAD_COUNT_FURNITURE     30
+#define THREAD_COUNT_FURNITURE      30
 #define THREAD_SELL_FURNITURE       31
 #define THREAD_CLEAR_FURNITURE      32
 #define THREAD_COUNT_TEXTS          33
@@ -187,38 +165,46 @@ new g_player_listitem[MAX_PLAYERS][96];
 #define THREAD_LIST_ADMINS	        54
 #define THREAD_DMVRELEASE			55
 #define THREAD_UPDATE_LANDLABELS    56
-#define THREAD_LOAD_ATMS            59
-#define THREAD_CAR_STORAGE          52
-#define THREAD_LIST_PGVEHICLES_VALLEY 57
-#define THREAD_SELECT_CODE			58
+#define THREAD_LOAD_ATMS            57
+#define THREAD_CAR_STORAGE          58
+#define THREAD_LIST_PGVEHICLES_VALLEY 59
+#define THREAD_SELECT_CODE			60
 #define THREAD_LOAD_LOCKERS			61
-#define THREAD_LOAD_GGARAGE         64
+#define THREAD_LOAD_GGARAGE         62
 #define THREAD_LOAD_PGARAGE         63
-#define THREAD_CAR_GSTORAGE          65
-#define THREAD_PROCESS_MUSIC        66
-#define THREAD_VOTE_LOAD        67
-#define THREAD_VOTE_LOAD1       68
-#define THREAD_COUNT_VOTERS      69
-#define THREAD_LOAD_WEAPON       70
+#define THREAD_CAR_GSTORAGE         64
+#define THREAD_PROCESS_MUSIC        65
+#define THREAD_VOTE_LOAD            66
+#define THREAD_VOTE_LOAD1           67
+#define THREAD_COUNT_VOTERS         68
+#define THREAD_LOAD_WEAPON          69
 
-//-----------------------------[ FUNTION SHORTCUT ]----------------------------
-#define SCMf 	SendClientMessageFormatted  // SendClientMessage with string formats
+//---------------------------------------------------[ FUNCTION SHORTCUTS ] ---------------------------------------------
+
+#define SCMf 	SendClientMessageFormatted  
 #define SCMA 	SendClientMessageToAll
-#define SM 		SendMessage                 // SendClientMessage with string formats
-#define SMA 	SendMessageToAll            // SendClientMessageToAll with string formats
-#define SAM 	SendAdminMessage            // with string formats
+#define SM 		SendMessage                 
+#define SMA 	SendMessageToAll            
+#define SAM 	SendAdminMessage            
 
-//-----------------------------[ COLORS ]----------------------------
-#define MAX_TDS 77
+//---------------------------------------------------[ COLORS ] ----------------------------------------------------------
+
 #define mred "{ff0000}"
 #define mcol "{c0ff5c}"
-
+#define COLOR_GRAD1 0xB4B5B7FF
+#define TEAM_HIT_COLOR 0xFFFFFF00
+#define TEAM_BLUE_COLOR 0x2641FE00
+#define SERVER_COLOR  0x04bd13FF
+#define SVRCLR       "{04bd13}"
+#define TEAL		"{00AAAA}"
+#define SERVER_COLOR2 0xEC7063ff
+#define SVRCLR2      "{EC7063}"
+#define COLOR_TWEET	     0x00FF80FF
 #define HOUSE_COLOR   		0xB2FF8EFF
 #define HOUSE				"{B2FF8E}"
 #define BIZ_COLOR			0xFFFF00FF
 #define BIZ					"{006400}"
 #define BLUE          		"{233EFA}"
-
 #define WHITE				"{FFFFFF}"
 #define GREY				"{AFAFAF}"
 #define RED					"{FF0000}"
@@ -228,9 +214,6 @@ new g_player_listitem[MAX_PLAYERS][96];
 #define LIGHTRED     		"{FF6347}"
 #define JAILGUARD           "{D07429}"
 #define COLOR_PINK 			0xFF66FFAA
-
-
-
 #define COLOR_JAILGUARD     0xD07429FF
 #define COLOR_DISPATCH 		0xff4419ff
 #define COLOR_WHITE 		0xFFFFFFFF
@@ -280,19 +263,18 @@ new g_player_listitem[MAX_PLAYERS][96];
 #define COLOR_DARKAQUA 		0x83BFBFAA
 #define COLOR_REALRED       0xFF0000FF
 #define COLOR_CYAN          0x00FFFFFF
-#define MAX_LISTED_ITEMS 17
-//Tune System
-#define COLOR_LIGHTBLUE 0x91C8FF//Server text messages
-#define COLOR_GROUPTALK 0x87CEEBAA  // SKYBLUE
-#define COLOR_MENU 0xFFFFFFAA		// WHITE (FFFFFF) menu's (/help)
-#define COLOR_SYSTEM_PM 0x66CC00AA	// LIGHT GREEN
-#define COLOR_SYSTEM_PW 0xFFFF33AA	// YELLOW
-//MYSQL
+#define COLOR_LIGHTBLUE     0x91C8FF
+#define COLOR_GROUPTALK     0x87CEEBAA  
+#define COLOR_MENU          0xFFFFFFAA	
+#define COLOR_SYSTEM_PM     0x66CC00AA	
+#define COLOR_SYSTEM_PW     0xFFFF33AA	
+
+//---------------------------------------------------[ MYSQL VARIABLES ] ----------------------------------------------------------
 new connectionID;
 new radioConnectionID;
 new queryBuffer[1024];
 
-//-----------------------------[ NEW VARIABLES]----------------------------
+//---------------------------------------------------[ NEW VARIABLES ] ----------------------------------------------------------
 new GZArea[2];
 new takingselfie[MAX_PLAYERS];
 new robcar;
@@ -333,66 +315,45 @@ new MenuType[MAX_CCTVMENUS];
 new TotalMenus;
 new PlayerMenu[MAX_PLAYERS];
 new LastPos[MAX_PLAYERS][LP];
-
 new ptmCBugFreezeOver[MAX_PLAYERS];
 new ptsLastFiredWeapon[MAX_PLAYERS];
 #if defined Christmas
 		new CarolLyrics[MAX_PLAYERS] = 0;
 #endif
-
 new ReconnectIP[MAX_PLAYERS][32];
-
 new gScriptObject[MAX_OBJECTS char];
-
 new zone_paintball[2], area_paintball[2];
 new pbNext;
-
 new tsstring[2048], psstring[2048];
 new PayCheckCode[MAX_PLAYERS];
 new UserCode[MAX_PLAYERS];
 new Sliding[MAX_PLAYERS];
-
+new g_player_listitem[MAX_PLAYERS][96];
 new CITYHALL;
 new PAWNSHOP;
-// Actor Job Represent
 new ActorJob[14];
 new HospitalActor[4];
-
 new ladder[5];
-
 new InsideTut[MAX_PLAYERS];
-// Car windows
 new CarWindows[MAX_VEHICLES] = 0;
-
-//farmerjob
 new FarmerVehicles[10];
 new Harvesting[MAX_PLAYERS];
-
 new jailarea;
-
-// Quiz System
 new quizQuestion[72];
 new quizAnswer[32];
 new CreateQuiz = -1;
-// Mask System
 new Maskara[MAX_PLAYERS];
 new MaskaraID[MAX_PLAYERS] = 0;
-
-// Blindfold
 new pBlind[MAX_PLAYERS] = 1;
-// Seatbelt
 new ExBJck[MAX_PLAYERS];
-
-// ELM Lights
 new Flasher[MAX_VEHICLES] = 0;
 new FlasherState[MAX_VEHICLES];
 new OilExpoVehicle[7];
 new GettingOilContainer[MAX_PLAYERS];
 new VehicleInterior[MAX_PLAYERS];
+new VehicleStatus[MAX_VEHICLES char] = 0;
 
-new VehicleStatus[MAX_VEHICLES char] = 0; // 0 == none, 1 == vehicle dead about to respawn
-
-//------------------MULTI DI-ARRAYS------------------//
+//---------------------------------------------------[ MULTI DI-VARIABLES ] ----------------------------------------------------------
 new VendorData[MAX_VENDOR][vendorData];
 new OilExpoObjects[MAX_VEHICLES][OILEXPO_LIMIT];
 new FruitBoxObjects[MAX_VEHICLES][OILEXPO_LIMIT];
@@ -404,17 +365,15 @@ new GraffitiData[MAX_GRAFFITI_POINTS][graffitiData];
 new SpeedData[MAX_SPEED_CAMERAS][speedData];
 new GateData[MAX_GATES][gateData];
 new ObjectData[MAX_MAPOBJECTS][objectData];
-#define MAX_STATIC_OBJECTS 275
-
 new StaticObject[MAX_STATIC_OBJECTS];
-//-----------------------------[ BOOLS]----------------------------
+//---------------------------------------------------[ BOOLS ] ----------------------------------------------------------
 new bool:isUsingRadioVoip[MAX_PLAYERS];
 new bool:isUsingPhoneVoip[MAX_PLAYERS];
 new bool:pCBugging[MAX_PLAYERS];
 new bool: Reconnecting[MAX_PLAYERS];
 new bool:pBlood[MAX_PLAYERS] = {false,...};
 new bool:IsShownZoneTD[MAX_PLAYERS];
-//-----------------------------[ CONSTS FLOATS]----------------------------
+//---------------------------------------------------[ CONSTS FLOAT ] ----------------------------------------------------------
 
 const Float: Radius = 1.4; 
 const Float: Speed  = 1.25;
@@ -424,13 +383,11 @@ new Float:TX[MAX_PLAYERS];
 new Float:TY[MAX_PLAYERS];
 new Float:TZ[MAX_PLAYERS];
 new Float:Milliage[MAX_VEHICLES];
-//CCTV
-new Float:CCTVLA[MAX_PLAYERS][3];  //CCTV LookAt
+new Float:CCTVLA[MAX_PLAYERS][3];  
 new Float:CCTVLAO[MAX_CCTVS][3];
-new Float:CCTVRadius[MAX_PLAYERS]; //CCTV Radius
+new Float:CCTVRadius[MAX_PLAYERS];
 new Float:CCTVDegree[MAX_PLAYERS] = 0.0;
-new Float:CCTVCP[MAX_CCTVS][4]; //CCTV CameraPos
-
+new Float:CCTVCP[MAX_CCTVS][4]; 
 new Float:PepperHealth[MAX_PLAYERS];
 new const g_MaleSkins[184] = {
 	1, 2, 3, 4, 5, 6, 7, 8, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
@@ -483,223 +440,8 @@ new Float:AllFruit[14][4]=
 	{-2269.559326, -2324.976807, 26.808689, 13.0}
 
 };
-/*
-new FIRE_INFO[][ENUM_FIRE_INFO] =
-{
-	{true, false, 0.356599, -2.323499, -2.282700, 0.000000, 0.000000, 180.000000}, //400
-	{true, false, 0.438600, -2.509499, -2.088700, 0.000000, 0.000000, 180.000000}, //401
-	{true, true, 0.502600, -2.623499, -2.136700, 0.000000, 0.000000, 180.000000}, //402
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //403
-	{true, false, 0.452600, -2.679299, -2.057499, 0.000000, 0.000000, 180.000000}, //404
-	{true, false, 0.484899, -2.694099, -2.203500, 0.000000, 0.000000, 180.000000}, //405
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //406
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //407
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //408
-	{true, false, 0.613099, -3.776700, -2.107199, 0.000000, 0.000000, 180.000000}, //409
-	{true, false, 0.393799, -2.313999, -2.057199, 0.000000, 0.000000, 180.000000}, //410
-	{true, true, 0.307799, -2.537999, -2.083199, 0.000000, 0.000000, 180.000000}, //411
-	{true, false, 0.427300, -3.339999, -2.165199, 0.000000, 0.000000, 180.000000}, //412
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //413
-	{true, false, 0.516099, -3.160899, -2.317199, 0.000000, 0.000000, 180.000000}, //414
-	{true, true, 0.378100, -2.368799, -2.103199, 0.000000, 0.000000, 180.000000}, //415
-	{true, false, 0.504199, -3.720499, -2.407199, 0.000000, 0.000000, 180.000000}, //416
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //417
-	{true, false, 0.574599, -2.647899, -2.439199, 0.000000, 0.000000, 180.000000}, //418
-	{true, false, 0.558099, -2.929099, -2.161200, 0.000000, 0.000000, 180.000000}, //419
-	{true, false, 0.574100, -2.639099, -2.137199, 0.000000, 0.000000, 180.000000}, //420
-	{true, false, 0.450100, -2.983999, -2.191200, 0.000000, 0.000000, 180.000000}, //421
-	{true, false, 0.411700, -2.547899, -2.334000, 0.000000, 0.000000, 180.000000}, //422
-	{true, false, -0.369800, -2.315999, -2.404000, 0.000000, 0.000000, 180.000000}, //423
-	{true, true, 0.512099, -1.669300, -1.856099, 0.000000, 0.000000, 180.000000}, //424
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //425
-	{true, false, 0.578000, -2.621899, -2.136100, 0.000000, 0.000000, 180.000000}, //426
-	{true, false, 0.601499, -3.878599, -2.324200, 0.000000, 0.000000, 180.000000}, //427
-	{true, false, 0.588999, -2.971599, -2.462199, 0.000000, 0.000000, 180.000000}, //428
-	{true, true, 0.503000, -2.523599, -1.965199, 0.000000, 0.000000, 180.000000}, //429
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //430
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //431
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //432
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //433
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //434
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //435
-	{true, false, 0.486999, -2.497599, -2.099299, 0.000000, 0.000000, 180.000000}, //436
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //437
-	{true, false, 0.490399, -2.705899, -2.371700, 0.000000, 0.000000, 180.000000}, //438
-	{true, true, 0.352400, -2.581899, -2.064399, 0.000000, 0.000000, 180.000000}, //439
-	{true, false, 0.420700, -2.677599, -2.570899, 0.000000, 0.000000, 180.000000}, //440
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //441
-	{true, false, 0.593100, -2.798699, -2.205100, 0.000000, 0.000000, 180.000000}, //442
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //443
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //444
-	{true, false, 0.480199, -2.714699, -2.147099, 0.000000, 0.000000, 180.000000}, //445
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //446
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //447
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //448
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //449
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //450
-	{true, false, 0.005400, -2.552699, -1.987100, 0.000000, 0.000000, 180.000000}, //451
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //452
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //453
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //454
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //455
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //456
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //457
-	{true, false, 0.519200, -2.790499, -2.229899, 0.000000, 0.000000, 180.000000}, //458
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //459
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //460
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //461
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //462
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //463
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //464
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //465
-	{true, false, 0.435200, -2.877399, -2.125900, 0.000000, 0.000000, 180.000000}, //466
-	{true, false, 0.481200, -2.917399, -2.097899, 0.000000, 0.000000, 180.000000}, //467
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //468
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //469
-	{true, false, -1.250200, -2.029500, -0.472800, 0.000000, 0.000000, 180.000000}, //470
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //471
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //472
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //473
-	{true, true, 0.584999, -2.822599, -2.209800, 0.000000, 0.000000, 180.000000}, //474
-	{true, false, 0.481000, -2.595699, -2.113800, 0.000000, 0.000000, 180.000000}, //475
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //476
-	{true, false, 0.587000, -2.805699, -2.071799, 0.000000, 0.000000, 180.000000}, //477
-	{true, false, 0.416700, -2.568699, -2.196799, 0.000000, 0.000000, 180.000000}, //478
-	{true, false, 0.460799, -2.865999, -2.082799, 0.000000, 0.000000, 180.000000}, //479
-	{true, false, 0.483300, -2.409999, -2.163700, 0.000000, 0.000000, 180.000000}, //480
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //481
-	{true, false, 0.445899, -2.641699, -2.439800, 0.000000, 0.000000, 180.000000}, //482
-	{true, false, -0.340600, -2.846899, -2.512400, 0.000000, 0.000000, 180.000000}, //483
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //484
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //485
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //486
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //487
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //488
-	{true, false, 0.446500, -2.771499, -2.240900, 0.000000, 0.000000, 180.000000}, //489
-	{true, false, 0.439999, -3.227299, -2.240900, 0.000000, 0.000000, 180.000000}, //490
-	{true, false, 0.572200, -2.925899, -2.166899, 0.000000, 0.000000, 180.000000}, //491
-	{true, false, 0.579599, -2.606400, -2.116899, 0.000000, 0.000000, 180.000000}, //492
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //493
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //494
-	{true, false, 0.596599, -2.335199, -2.332799, 0.000000, 0.000000, 180.000000}, //495
-	{true, false, 0.545400, -2.173599, -2.111700, 0.000000, 0.000000, 180.000000}, //496
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //497
-	{true, false, -0.473800, -3.108199, -2.361400, 0.000000, 0.000000, 180.000000}, //498
-	{true, false, 0.516200, -3.340600, -2.287400, 0.000000, 0.000000, 180.000000}, //499
-	{true, false, 0.446900, -1.940299, -2.245399, 0.000000, 0.000000, 180.000000}, //500
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //501
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //502
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //503
-	{true, false, 0.430299, -2.876699, -2.117300, 0.000000, 0.000000, 180.000000}, //504
-	{true, false, 0.446299, -2.772699, -2.236900, 0.000000, 0.000000, 180.000000}, //505
-	{true, true, 0.560599, -2.476300, -2.120100, 0.000000, 0.000000, 180.000000}, //506
-	{true, false, 0.485199, -2.971699, -2.262000, 0.000000, 0.000000, 180.000000}, //507
-	{true, false, 0.467400, -3.586999, -2.686900, 0.000000, 0.000000, 180.000000}, //508
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //509
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //510
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //511
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //512
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //513
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //514
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //515
-	{true, false, 0.447800, -2.946699, -2.141499, 0.000000, 0.000000, 180.000000}, //516
-	{true, false, 0.501800, -2.858699, -2.119499, 0.000000, 0.000000, 180.000000}, //517
-	{true, false, -0.423400, -2.882499, -2.091500, 0.000000, 0.000000, 180.000000}, //518
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //519
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //520
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //521
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //522
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //523
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //524
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //525
-	{true, false, 0.481799, -2.314099, -2.129499, 0.000000, 0.000000, 180.000000}, //526
-	{true, false, 0.471799, -2.298099, -1.999199, 0.000000, 0.000000, 180.000000}, //527
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //528
-	{true, false, -0.424699, -2.729899, -2.011199, 0.000000, 0.000000, 180.000000}, //529
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //530
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //531
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //532
-	{true, true, 0.515100, -2.452399, -2.037100, 0.000000, 0.000000, 180.000000}, //533
-	{true, true, 0.483099, -2.958400, -2.167099, 0.000000, 0.000000, 180.000000}, //534
-	{true, true, 0.350600, -2.693499, -2.189100, 0.000000, 0.000000, 180.000000}, //535
-	{true, true, 0.500000, -2.971299, -2.161099, 0.000000, 0.000000, 180.000000}, //536
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //537
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //538
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //539
-	{true, false, -0.410600, -2.748699, -2.265599, 0.000000, 0.000000, 180.000000}, //540
-	{true, true, 0.624000, -2.205999, -1.875100, 0.000000, 0.000000, 180.000000}, //541
-	{true, false, 0.587400, -2.829499, -1.996899, 0.000000, 0.000000, 180.000000}, //542
-	{true, false, -0.411000, -2.764599, -2.099200, 0.000000, 0.000000, 180.000000}, //543
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //544
-	{true, true, 0.314900, -2.263700, -2.260600, 0.000000, 0.000000, 180.000000}, //545
-	{true, false, 0.581200, -2.833499, -2.020299, 0.000000, 0.000000, 180.000000}, //546
-	{true, false, 0.629199, -2.589499, -2.074300, 0.000000, 0.000000, 180.000000}, //547
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //548
-	{true, false, 0.441300, -2.511600, -2.030299, 0.000000, 0.000000, 180.000000}, //549
-	{true, false, -0.628300, -2.899799, -2.267199, 0.000000, 0.000000, 180.000000}, //550
-	{true, false, 0.590799, -3.145499, -2.092799, 0.000000, 0.000000, 180.000000}, //551
-	{true, false, 0.446900, -3.063399, -1.924800, 0.000000, 0.000000, 180.000000}, //552
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //553
-	{true, false, 0.559300, -2.751999, -2.208499, 0.000000, 0.000000, 180.000000}, //554
-	{true, true, 0.136000, -2.282899, -2.003200, 0.000000, 0.000000, 180.000000}, //555
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //556
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //557
-	{true, true, 0.465799, -2.558699, -1.977200, 0.000000, 0.000000, 180.000000}, //558
-	{true, true, 0.633099, -2.394599, -1.977200, 0.000000, 0.000000, 180.000000}, //559
-	{true, true, 0.479999, -2.474699, -1.991199, 0.000000, 0.000000, 180.000000}, //560
-	{true, true, 0.446200, -2.739599, -2.166300, 0.000000, 0.000000, 180.000000}, //561
-	{true, true, 0.483300, -2.380199, -2.037100, 0.000000, 0.000000, 180.000000}, //562
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //563
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //564
-	{true, false, 0.479299, -2.134199, -1.999099, 0.000000, 0.000000, 180.000000}, //565
-	{true, false, 0.564700, -2.946699, -2.063100, 0.000000, 0.000000, 180.000000}, //566
-	{true, false, 0.628700, -2.776700, -2.252900, 0.000000, 0.000000, 180.000000}, //567
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //568
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //569
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //570
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //571
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //572
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //573
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //574
-	{true, false, 0.453399, -2.709800, -1.975300, 0.000000, 0.000000, 180.000000}, //575
-	{true, false, 0.658100, -3.092499, -2.043299, 0.000000, 0.000000, 180.000000}, //576
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //577
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //578
-	{true, false, -0.424600, -2.890699, -2.102699, 0.000000, 0.000000, 180.000000}, //579
-	{true, false, -0.408600, -2.872699, -2.092700, 0.000000, 0.000000, 180.000000}, //580
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //581
-	{true, false, 0.444999, -3.395499, -2.334199, 0.000000, 0.000000, 180.000000}, //582
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //583
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //584
-	{true, false, -0.428999, -3.143299, -1.889299, 0.000000, 0.000000, 180.000000}, //585
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //586
-	{true, true, 0.698000, -2.692600, -2.056400, 0.000000, 0.000000, 180.000000}, //587
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //588
-	{true, false, 0.583999, -2.358599, -1.965899, 0.000000, 0.000000, 180.000000}, //589
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //590
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //591
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //592
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //593
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //594
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //595
-	{true, false, 0.577000, -2.622299, -2.138499, 0.000000, 0.000000, 180.000000}, //596
-	{true, false, 0.577000, -2.622299, -2.138499, 0.000000, 0.000000, 180.000000}, //597
-	{true, false, 0.595000, -2.678299, -2.002500, 0.000000, 0.000000, 180.000000}, //598
-	{true, false, 0.440600, -2.773699, -2.239099, 0.000000, 0.000000, 180.000000}, //599
-	{true, false, 0.442600, -2.763700, -2.054199, 0.000000, 0.000000, 180.000000}, //600
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //601
-	{true, true, 0.560999, -2.523999, -2.200700, 0.000000, 0.000000, 180.000000}, //602
-	{true, true, 0.587000, -2.661999, -2.192699, 0.000000, 0.000000, 180.000000}, //603
-	{true, false, 0.425700, -2.877099, -2.124700, 0.000000, 0.000000, 180.000000}, //604
-	{true, false, -0.411900, -2.767699, -2.098700, 0.000000, 0.000000, 180.000000}, //605
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //606
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //607
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //608
-	{true, false, -0.477699, -3.106199, -2.359499, 0.000000, 0.000000, 180.000000}, //609
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000}, //610
-	{false, false, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000} //611
-};
-*/
+
+
 new
  Float: WheatAttachOffsets[WHEAT_LIMIT][4] =
  {
@@ -711,7 +453,8 @@ new
 	};
 
 
-//-----------------------------[ forwards]----------------------------
+//---------------------------------------------------[ FORWARDS ] ----------------------------------------------------------
+
 forward CountD();
 forward CountDP(playerid);
 forward TimerWashMoney(playerid);
@@ -719,14 +462,15 @@ forward TimerSelfRepair(playerid);
 forward RobBigbank(playerid);
 forward RobFleecabank(playerid);
 
-//-----------------------------[ OTHER CHAR AND TIMERS]----------------------------
+//---------------------------------------------------[ OTHER CHAR AND TIMERS] ----------------------------------------------------------
+
 new killtimerz[MAX_PLAYERS];
 new CDTimer[MAX_PLAYERS];
 new HJLimitTimer;
 new Timer[MAX_PLAYERS];
 new KeyTimer[MAX_PLAYERS];
-//new FlashTimer;
-//-----------------------------[ PLAYERTEXT ]----------------------------
+
+//---------------------------------------------------[ PLAYER TEXTDRAWS ] ----------------------------------------------------------
 new PlayerText:BelowNotTD[MAX_PLAYERS][1];
 new PlayerText: LOGINTD[MAX_PLAYERS][51];
 new PlayerText: ClotheTD[MAX_PLAYERS][4];
@@ -749,31 +493,25 @@ new PlayerText: INTRO[MAX_PLAYERS][6];
 new PlayerText:BanPlayerTD[MAX_PLAYERS][5];
 new PlayerText:LOGO[MAX_PLAYERS][7];
 new PlayerText: BLACK[MAX_PLAYERS][1];
-//PHONE
 new PlayerText: CALP[MAX_PLAYERS][3];
 new PlayerText: DIALERP[MAX_PLAYERS];
 new PlayerText: APPLOCKGET[MAX_PLAYERS][5];
 new PlayerText:PlayeridTD2[MAX_PLAYERS];
 new PlayerText3D:label1[14];
 new PlayerText: SPEEDO[MAX_PLAYERS][17];
-
 new PlayerText:SpeedPlayerTD[MAX_PLAYERS][1];
 new PlayerText:ModernPlayerText[MAX_PLAYERS][1];
-
 new PlayerText:NumberTD22[MAX_PLAYERS];
 new PlayerText:NumberTD[MAX_PLAYERS];
 new PlayerText: DEATH[MAX_PLAYERS][4];
-//animation
-
 new killeffect[MAX_PLAYERS]  , pepper[MAX_PLAYERS];
 
 
-//-----------------------------[ GLOBALTEXT ]----------------------------
+//---------------------------------------------------[ GLOBAL TEXTDRAWS ] ----------------------------------------------------------
 new Text:TwtTD[5];
 new Text:TextdrawTD;
 new Text:Textdraw2;
 new Text: DEATHBUTTON[15];
-//PHONE
 new Text: PHONELOCK[42];
 new Text: PHONE[109];
 new Text: APPLOCK[91];
@@ -781,15 +519,11 @@ new Text: APPLOADING[3];
 new Text: DIALER[38];
 new Text: CAL[79];
 new Text: INSTA[50];
-//PHONE
 new Text:Blind;
 new Text:BanTD[11];
 new Text:TD;
-
 new Text:Blood[9];
-//-----------------------------[ 3DTEXT]----------------------------
+//---------------------------------------------------[ 3D TEXTS ] ----------------------------------------------------------
 new Text3D:vehicleCallsign[MAX_VEHICLES] = {Text3D:INVALID_3DTEXT_ID, ...};
 new Text3D:PlayerLabel[MAX_PLAYERS];
-// VIP Callsigns
 new Text3D:DonatorCallSign[MAX_VEHICLES] = {Text3D:INVALID_3DTEXT_ID, ...};
-
