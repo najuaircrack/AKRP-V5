@@ -7,7 +7,7 @@
  * |   [Server]: "All Kerala Roleplay"                         |*
  * |   [Founder]: "SHAZ"                                       |*
  * |   [Developer]: "NAJU & ROCKY" (@najuaircrack)             |*
- * |   [Scripts Date]: "20/5/2025"                             |*                                                         |*
+ * |   [Scripts Date]: "20/5/2025"                             |*                                                        
  * |   [Owner]: "GULAN & MANU"                                 |*
  * |   [Version]: "V5-OMP - Public Release"                    |*
  * |___________________________________________________________|*
@@ -26,7 +26,7 @@
 */
 
 
-//-----------------------------[ ENUMS]----------------------------
+//-----------------------------------------------------[ ENUMS ] ----------------------------------------------------------
 
 enum {
 	GENDER_MALE = 1,
@@ -49,10 +49,11 @@ enum robEnum
 	rJwlTime,
 	rHousetime
 };
+
 enum E_TDW_MATH_VEHICLE_SPEED_TYPE
 {
-	EI_MATH_SPEED_KMPH, // kilometers per hour
-	EI_MATH_SPEED_MPH // miles per hour
+	EI_MATH_SPEED_KMPH,
+	EI_MATH_SPEED_MPH
 };
 
 enum YTINFO
@@ -60,6 +61,7 @@ enum YTINFO
 	MUSICNAME[30],
 	LINK[100]
 };
+
 enum LP
 {
 	Float:LX,
@@ -73,7 +75,6 @@ enum(<<= 1)
 {
     SOBEIT = 0x5E8606
 };
- 
 
 enum vendorData
 {
@@ -89,6 +90,7 @@ enum vendorData
 	vendorObject,
 	Text3D: vendorTextId
 };
+
 enum inventoryData
 {
 	invExists,
@@ -100,16 +102,17 @@ enum inventoryData
 
 enum e_InventoryItems
 {
-	e_InventoryItem[32], //Nama item
-	e_InventoryModel, //Object item
+	e_InventoryItem[32], 
+	e_InventoryModel, 
 	bool:e_InventoryDrop
 };
+
 enum DCTWTtimerEnum
 {
 	rTwtTime,
 	rDCTime
 };
-// BACKFIRE SYSTEM BY NAJU
+
 enum ENUM_FIRE_INFO
 {
 	bool:fire_VALID,
@@ -161,7 +164,6 @@ enum speedData {
 	sMapIcon
 };
 
-
 enum gateData {
 	gateID,
 	gateExists,
@@ -181,7 +183,6 @@ enum gateData {
 	gateObject
 };
 
-
 enum objectData {
 	mobjID,
 	mobjExists,
@@ -194,7 +195,6 @@ enum objectData {
 	mobjObject
 };
 
-
 enum eItemBox
 {
 	ItemBoxIcon,
@@ -203,6 +203,7 @@ enum eItemBox
 	ItemBoxLoading,
 	ItemBoxSize
 }
+
 enum bpEnum
 {
 	bpObject,
@@ -294,13 +295,10 @@ enum pEnum
 	pNewbieMuted,
 	pHelpMuted,
 	pAdMuted,
-	pLiveMuted,
-	
+	pLiveMuted,	
 	pVerified,
 	pCode,
-	
 	pDonator,
-	
 	pGlobalMuted,
 	pReportMuted,
 	pReportWarns,
@@ -456,7 +454,7 @@ enum pEnum
 	pReports,
 	pNewbies,
 	pHelpRequests,
-	pSpeedometer, // (1) KM/H (2) MPH
+	pSpeedometer,
 	pFactionMod,
 	pGangMod,
 	pBanAppealer,
@@ -547,9 +545,7 @@ enum pEnum
 	pHelpRequest[128],
 	pAcceptedHelp,
 	pHouseOffer,
-
     pLoginmusic[128],
-
 	pHouseOffered,
 	pGpsOffer,
 	pHousePrice,
@@ -649,11 +645,11 @@ enum pEnum
 	pSpamTime,
 	pMuted,
 	Text3D:pBoomboxText,
-	pBoomboxPlaced, // BOOMBOX
+	pBoomboxPlaced, 
 	pBoomboxObject,
 	pBoomboxListen,
 	pBoomboxURL[128],
-	Float:pMinX, // LAND CREATION
+	Float:pMinX, 
 	Float:pMinY,
 	Float:pMaxX,
 	Float:pMaxY,
@@ -663,7 +659,7 @@ enum pEnum
 	pZoneType,
 	pZonePickups[4],
 	pZoneID,
-	pZoneCreation, //
+	pZoneCreation,
 	pLandCost,
 	pTurfType,
 	pPointType,
@@ -706,21 +702,17 @@ enum pEnum
  	Float:pPointX,
  	Float:pPointY,
  	Float:pPointZ,
-	pWatchingIntro, // Server Intro
+	pWatchingIntro, 
 	pLottery,
 	pLotteryB,
 	pHunger,
 	pHungerTimer,
 	pThirst,
 	pThirstTimer,
-
 	Text3D:aMeID,
 	aMeStatus,
-
     pSelectItem,
     pGiveAmount,
-
-	//new meth cooking system
 	pBatteries,
 	pSafezone,
 	pSafezoneEnter,
@@ -729,12 +721,10 @@ enum pEnum
 	pLockpick,
 	pRob,
     pMethTime,
-	//job signal
-	 pIndiHome,
-	 pIndiHome1,
+	pIndiHome,
+	pIndiHome1,
 	pLastInsta,
     pMethScore,
-
  	pLoginCamera,
  	pSmuggleTime,
  	pDealerGang,
@@ -798,43 +788,32 @@ enum pEnum
 	pRareTime,
 	pVipTimes,
 	pEngine,
-	pChatAnim, // - newvars
+	pChatAnim,
 	pToolkit,
 	pRepairKit,
 	pRobbingHouse,
-
 	#if defined Christmas
 		pLastCarolTime,
 		pLastHouseCarol,	
 	#endif
-
 	pCandy,
-
 	pDeathActor,
-	Text3D:pDeathInfo,
-    
+	Text3D:pDeathInfo,  
     pVest,
 	bool:pEquipVest,
 	pEquipTimer,
-	pVendorTime,
-    
+	pVendorTime,   
 	pWaypoint,
 	pLocation[32],
 	Float:pWaypointPos[3],
-
 	pPickaxe,
-
 	pVW,
 	pInt,
-
 	pDonateWeapon,
-
 	pRHMutes,
     pRHMuteTime,
-
     pFood,
 	pDrink,
-
     pPSSelected,
 	pPSCash,
 	pPSDCash,
@@ -847,7 +826,6 @@ enum pEnum
 	pPSPOT,
 	pPSMETH,
 	pPSCRACK,
-
 	pOutfit,
 	pFlashlight,
 	pUsedFlashlight
